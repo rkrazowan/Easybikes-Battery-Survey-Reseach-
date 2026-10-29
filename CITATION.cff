@@ -1,0 +1,20 @@
+cff-version: 1.2.0
+message: "If you use this code or data, please cite it as below."
+title: "Code and data: survey-calibrated, temperature-driven assessment of lead-acid and LFP batteries for easy-bikes in Bangladesh"
+type: software
+authors:
+  - family-names: "Kabir"
+    given-names: "Razowan"
+    orcid: "https://orcid.org/0009-0008-6274-8117"
+    affiliation: "Khulna University of Engineering and Technology, Bangladesh"
+  - family-names: "Mridha"
+    given-names: "Md. Raju"
+    affiliation: "Khulna University of Engineering and Technology, Bangladesh"
+  - family-names: "Sorif"
+    given-names: "Meshkat"
+    affiliation: "Gopalganj Science and Technology University, Bangladesh"
+  - family-names: "Rahman"
+    given-names: "Md Atikur"
+    affiliation: "Khulna University of Engineering and Technology, Bangladesh"
+license: MIT
+date-released: "2026-10-29"

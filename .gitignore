@@ -1,0 +1,10 @@
+*.slx
+*.slxc
+slprj/
+*.asv
+*.pyc
+__pycache__/
+out/
+results_summary.csv
+survey_summary.csv
+fig*.png
