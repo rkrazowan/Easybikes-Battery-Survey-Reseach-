@@ -1,0 +1,81 @@
+\section{Literature and Input Data}
+\label{sec:data}
+\subsection{Literature used}
+Table~\ref{tab:lit} lists the published sources and what each contributes. Entries marked $\dagger$ were supplied in the author's data file; their ranges are used as stated and only for the round-trip efficiency and the literature cycle life used for comparison.
+\begin{table}[t]
+\caption{Literature used, the finding relevant to this work, and the gap it leaves.}
+\label{tab:lit}
+\centering\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{p{2.6cm}p{3.0cm}p{6.0cm}p{2.8cm}}
+\hline
+Source & Scope & Finding used here & Gap addressed here \\
+\hline
+Chowdhury \emph{et al.} \cite{chowdhury2026} & Field survey ($n$=150, Gopalganj and Khulna) and one instrumented bike & Lead-acid banks; 8--9 kWh per full charge; about 20 A at 60 V with five passengers; iron-core chargers about 80\%; hub fee BDT 80--100 per charge & Lead-acid only; no chemistry or temperature model \\
+CLEAN/BWGED \cite{clean2024} & Fleet and grid load & about 1.4 M bikes; about 4{,}905 GWh/yr & Fleet level only \\
+Pure Earth \cite{pureearth_smep,fe2024}; IEDCR \cite{das2026}; UNCTAD \cite{unctad_smep} & ULAB policy and lead burden & 3--4 M electric three-wheelers; about 125 kg Pb per easy-bike; 167{,}000 t Pb waste per year; 36 M children poisoned; about 80\% of ULAB recycled informally & Not linked to battery life or chemistry \\
+Hasan \cite{hasan2020} & E-rickshaw charging stations & Packs of four 150 Ah, 12 V batteries (7.2 kWh); charging efficiency 89\% & Lead-acid only \\
+Yagci \emph{et al.} \cite{yagci2026} & LFP ageing & $E_a$ = 37.3 $\pm$ 12.8 kJ/mol & Stationary cells \\
+Tsujikawa \emph{et al.} \cite{tsujikawa2009}; \cite{bu806a} & VRLA ageing & Life roughly halves per 8--10\,$^\circ$C; damage summed over variable temperature & Float service \\
+Jasper \emph{et al.} \cite{jasper2025}; Yudhistira \emph{et al.} \cite{yudhistira2022} & Life-cycle assessment & Production and end of life about 40 kg CO$_2$e/kWh for lead-acid; LFP lower impact per kWh delivered where many cycles occur & European data; not easy-bike duty \\
+Keshan \emph{et al.} \cite{keshan2016}$\dagger$ & Off-grid stationary storage & Efficiency and cycle-life ranges (400 and 2{,}500 cycles used only as the literature comparison) & Stationary, not traction \\
+Sch\"oberl \emph{et al.} \cite{schoberl2024} & Thermal runaway & Graphite/NMC-811 needs significantly higher safety measures than graphite/LFP & Safety only \\
+Chowdhury \emph{et al.} \cite{chowdhury2021}; \cite{eos2026} & Remediation near ULAB sites & Soil lead $-$96\%, child blood lead $-$35\% (Savar); $-$22\% (Tangail) & Health only \\
+This study's survey \cite{survey2026} & $n$=43 drivers, October 2026 & Purchase price, set size, daily distance, replacement interval, resale value, main problem & Convenience sample; LFP $n$=5 \\
+\hline
+\end{tabular}
+\end{table}
+
+\subsection{Parameter matrix}
+Tables~\ref{tab:params1} and \ref{tab:params2} list every model input, its value, source and status: \emph{Survey} (taken from the field survey, Section~\ref{sec:survey}), \emph{Sourced} (published or official), \emph{Derived} (computed from the two), \emph{Calibrated} (fitted to the survey) or \emph{Scenario} (no source found; varied in Section~\ref{sec:sens}). LA = lead-acid; values are listed as LA / LFP where they differ.
+\begin{table}[t]
+\caption{Parameter matrix, part 1: pack, performance and temperature effects.}
+\label{tab:params1}
+\centering\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{p{2.5cm}p{3.3cm}p{6.8cm}p{1.8cm}}
+\hline
+Parameter & Model value & Source / reason & Status \\
+\hline
+Pack voltage & 48 / 48 V & Four 12 V batteries per set is the most common configuration (\fourBat{} of \nSurvey{} respondents; \fourBatLA{} of \nLA{} lead-acid); LFP users reported 48 V & Survey \\
+Pack capacity & \ahMed{} / \ahMed{} Ah (\packKWh{} kWh) & Median of the four lead-acid capacities reported (120, 120, 160, 180 Ah; a fifth value of 30 Ah looks like a charger current and is excluded); LFP capacity was not reported and is set equal & Survey, derived \\
+Round-trip efficiency & 77.5 / 95\% & Midpoints of ranges in the author's data file \cite{keshan2016} & Sourced$\dagger$ \\
+Cycle life $N_{80}$ at 80\% DoD, 25\,$^\circ$C & \NcalLA{} / \NcalLFP{} cycles & Fitted so that modelled life at Khulna equals the survey median replacement interval (\replMedLA{} / \replMedLFP{} months); literature values 400 / 2{,}500 \cite{keshan2016} are shown for comparison & Calibrated \\
+Set price (BDT) & \priceLA{} / \priceLFP{} & Median purchase price of the current set (survey, $n$ = \nLA{} / \nLFP{}) & Survey \\
+Resale of old set & \scrapLA{} / \scrapLFP{}\% of price & Median of individual resale/purchase ratios & Survey \\
+Ambient temperature & 15.5--33.6\,$^\circ$C monthly mean & NASA POWER T2M, MERRA-2 \cite{nasa_power,gelaro2017}; 42\,$^\circ$C day \cite{heat2025} & Sourced \\
+LA life vs heat & Halves per 8 K above 25\,$^\circ$C & \cite{bu806a}; peer-reviewed 10 K \cite{tsujikawa2009} tested in Section~\ref{sec:sens} & Sourced \\
+LFP ageing $E_a$ & 37.3 kJ/mol & 37.3 $\pm$ 12.8 \cite{yagci2026} & Sourced \\
+Capacity factor vs $T$ (0, 10, 25, 40, 50\,$^\circ$C) & LA 0.84, 0.90, 1.00, 1.05, 1.05; LFP 0.79, 0.91, 1.00, 1.02, 1.02 & Vendor notes: LA \cite{discoverbattery}; LFP above 25\,$^\circ$C \cite{bonnen2026}, cold side supported qualitatively by \cite{bauknecht2023}. Only months below 25\,$^\circ$C are affected & Vendor-level \\
+Resistance sensitivity $E_r$ & 25 / 20 kJ/mol & No source found; small effect & Scenario \\
+Cycle-life DoD exponent $k$ & 1.4 / 1.0 & No source found; cycle life $\propto (0.8/\mathrm{DoD})^k$ & Scenario \\
+Battery above ambient & +5\,$^\circ$C (0 and 10 tested) & Not measured in the survey or in \cite{chowdhury2026}; a large uncertainty & Scenario \\
+\hline
+\end{tabular}
+\end{table}
+\begin{table}[t]
+\caption{Parameter matrix, part 2: duty cycle, economics, fleet, carbon and lead.}
+\label{tab:params2}
+\centering\footnotesize
+\renewcommand{\arraystretch}{1.1}
+\begin{tabular}{p{2.5cm}p{3.3cm}p{6.8cm}p{1.8cm}}
+\hline
+Parameter & Model value & Source / reason & Status \\
+\hline
+Daily distance & \kmUsed{} km (50--100 tested) & Mean of all \nSurvey{} respondents (lead-acid \kmMeanLA{}, LFP \kmMeanLFP{}, Powder \kmMeanPW{} km) & Survey \\
+Charges per day & 1 & \onePerDay{} of \nSurvey{} drivers charge once a day & Survey \\
+Energy use & \ekmUsed{} Wh/km (52--88 tested) & Lower of two published values (71.4 and 88 Wh/km) cited in \cite{peakdemand}; consistent with a \packKWh{} kWh set serving about 83 km at about 90\% DoD & Sourced \\
+Average speed & \speedUsed{} km/h & 1.2 kW (20 A $\times$ 60 V, five passengers \cite{chowdhury2026}) divided by the energy use & Derived \\
+Charger efficiency & 80\% & Iron-core chargers \cite{chowdhury2026}; 89\% reported for e-rickshaw stations \cite{hasan2020} & Sourced \\
+Operating days & 300 per year (250--350 tested) & Not asked in the survey; absorbed in the calibrated cycle life & Scenario \\
+Tariff & BDT 11.36/kWh (7.70 and 16.24 tested) & BERC order of June 3, 2026, battery/EV-charging category \cite{berc2026fe,fenews2026}; hub-fee check: BDT 80--100 per 8--9 kWh $\approx$ 10.6 \cite{chowdhury2026} & Sourced (press) \\
+Discount rate & 11.96\% ($\pm$20\% tested) & Weighted-average lending rate on advances, April 2026 \cite{ceic_lending} & Sourced \\
+Maintenance & 0 & No source found; battery-only cost & Scenario \\
+Fleet size & 1.4 M \cite{clean2024}; 3.0 M & Sources disagree (3--4 M \cite{pureearth_smep}; about 4 M and 500{,}000 autorickshaws \cite{unctad_smep}) & Sourced \\
+Grid emission factor & 0.62 tCO$_2$/MWh (0.55--0.70 tested) & Department of Environment, 2020--22 \cite{doe_gef} & Sourced \\
+Manufacture and EOL carbon & 40 / 50 kg CO$_2$e/kWh (LFP 50--110 tested) & \cite{jasper2025}; European study & Sourced \\
+Lead per set & 56 / 84 / 125 kg & Four batteries of 14--21 kg lead each \cite{smep2024}; 125 kg per easy-bike \cite{fe2024,pureearth_smep} & Sourced, scenario \\
+Informal recycling share & 70--80\% & Only 30\% of ULAB recycling is formal \cite{fe2024}; about 80\% informal \cite{unctad_smep} & Sourced \\
+\hline
+\end{tabular}
+\end{table}

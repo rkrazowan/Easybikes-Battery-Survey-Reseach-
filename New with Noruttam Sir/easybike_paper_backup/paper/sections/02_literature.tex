@@ -1,0 +1,75 @@
+\section{Literature Review and Parameter Matrix}
+\subsection{Literature used}
+\Cref{tab:lit} lists the sources and what each contributes. Entries marked $\dagger$ were supplied in the author's data file and must be read in full before submission; the others were located and their key facts checked online (status in \texttt{references.bib}).
+\begin{table*}[t]
+\centering\footnotesize
+\caption{Literature used, key finding relevant to this work, and the gap it leaves.}\label{tab:lit}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabularx}{\textwidth}{>{\raggedright\arraybackslash}p{3.1cm}>{\raggedright\arraybackslash}p{3.3cm}>{\raggedright\arraybackslash}X>{\raggedright\arraybackslash}p{3.4cm}}
+\toprule
+Source & Scope & Finding used here & Gap / how this paper adds \\
+\midrule
+Chowdhury et al.\ \citep{chowdhury2026} & Field survey (n=150, Gopalganj and Khulna) and one instrumented bike & 5$\times$12~V, 150~Ah lead-acid bank; 8--9~kWh per full charge; about 20~A at 60~V with five passengers; iron-core chargers about 80\%; hub fee BDT 80--100 per charge & Lead-acid only; no chemistry or temperature model \\
+CLEAN/BWGED \citep{clean2024}$\dagger$ & Fleet and grid load & $\approx$1.4~M bikes; $\approx$4{,}905~GWh/yr & Fleet-level \\
+Pure Earth \citep{pureearth_smep}; IEDCR bulletin \citep{das2026} & ULAB policy and lead burden & 3--4~M e-three-wheelers; $\approx$125~kg Pb per bike; 36~M children poisoned & Not linked to battery life or chemistry \\
+Yagci et al.\ \citep{yagci2026} & LFP ageing & $E_a=37.3\pm12.8$~kJ/mol & Stationary cells \\
+Jalkanen et al.\ \citep{jalkanen2015} & NMC/graphite cycle ageing & 2600 cycles at room temperature vs 2000 at 45$^\circ$C & One cell type \\
+Tsujikawa et al.\ \citep{tsujikawa2009}; \citep{bu806a} & VRLA ageing & Life roughly halves per 8--10$^\circ$C; damage summed over a variable temperature & Float service \\
+Jasper et al.\ \citep{jasper2025} & LCA, lead-acid vs LFP & Production+EOL about 40 (lead-acid) vs 50 (LFP) kg\,CO$_2$e/kWh; LFP better with many cycles & European data \\
+Yudhistira et al.\ \citep{yudhistira2022}; Paul et al.\ \citep{paul2024} & LCA grid storage; Li-battery LCA review & LFP lower impact per kWh delivered; NMC higher cell footprint & Not easy-bike duty \\
+Keshan et al.\ \citep{keshan2016}$\dagger$ & Off-grid stationary storage & Efficiency and cycle-life ranges for lead-acid and Li-ion & Stationary, not traction \\
+Sch\"oberl et al.\ \citep{schoberl2024}$\dagger$ & Thermal runaway & LFP onset $>270^\circ$C; NMC about 150--210$^\circ$C & Safety only \\
+Chowdhury et al.\ \citep{chowdhury2021}; \citep{eos2026} & Remediation near ULAB sites & Soil lead $-96\%$, child blood lead $-35\%$ (Savar); $-22\%$ (Tangail) & Health only \\
+\bottomrule
+\end{tabularx}
+\end{table*}
+
+\subsection{Parameter matrix}
+\Cref{tab:params} lists every model input, the value used, its source and its status: \emph{Sourced} (published or official figure), \emph{Derived} (computed from sourced values), or \emph{Scenario} (no public Bangladesh-specific source found; the value is varied in \cref{sec:sens}).
+\begin{landscape}
+\begin{footnotesize}
+\renewcommand{\arraystretch}{1.12}
+\begin{longtable}{>{\raggedright\arraybackslash}p{3.0cm}>{\raggedright\arraybackslash}p{4.0cm}>{\raggedright\arraybackslash}p{7.3cm}>{\raggedright\arraybackslash}p{2.6cm}}
+\caption{Parameter matrix. LA = lead-acid. Model values are listed as LA / LFP / NMC where they differ.}\label{tab:params}\\
+\toprule
+Parameter & Model value & Source / reason & Status \\
+\midrule\endfirsthead
+\toprule Parameter & Model value & Source / reason & Status \\\midrule\endhead
+\bottomrule\endfoot
+\multicolumn{4}{l}{\textit{Pack and performance}}\\
+Voltage & 60 / 51.2 / 51.8~V & LA: five 12~V batteries \citep{chowdhury2026}; LFP 16S, NMC 14S & Sourced / standard\\
+Capacity & 150 / 150 / 150~Ah (9.0 / 7.7 / 7.8~kWh) & LA 150~Ah bank \citep{chowdhury2026}; Li packs sized to the same Ah so all can serve the duty & Derived\\
+Round-trip efficiency & 77.5 / 95 / 92.5\% & Midpoints of ranges in the author's data file \citep{keshan2016} & Sourced$\dagger$\\
+Cycle life at 80\% DoD, 25$^\circ$C & 400 / 2{,}500 / 1{,}250 & Midpoints of data-file ranges \citep{keshan2016}; NMC lower bound consistent with \citep{jalkanen2015} & Sourced$\dagger$\\
+Pack price (BDT) & 90{,}909 / 162{,}000 / 170{,}455 & Midpoint market prices in the data file per kWh, scaled to pack energy; LA reported $>$72{,}000 \citep{fe2024} & Sourced$\dagger$, derived\\
+\midrule
+\multicolumn{4}{l}{\textit{Temperature effects}}\\
+Ambient temperature & 15.5--33.6$^\circ$C monthly mean & NASA POWER T2M, MERRA-2 \citep{nasa_power,gelaro2017}; 42$^\circ$C day \citep{heat2025} & Sourced\\
+LA life vs heat & Halves per 8~K above 25$^\circ$C & \citep{bu806a}; peer-reviewed 10~K \citep{tsujikawa2009} tested in \cref{sec:sens} & Sourced\\
+Li ageing $E_a$ & LFP 37.3; NMC 10.3~kJ/mol & LFP: $37.3\pm12.8$ \citep{yagci2026}; NMC: from 2600 cycles (room $T$) vs 2000 (45$^\circ$C) \citep{jalkanen2015} & Sourced / derived\\
+Capacity factor vs $T$ & LA 0.80--1.12; Li 0.65--1.05 over 0--50$^\circ$C & LA \citep{discoverbattery}; Li above 25$^\circ$C \citep{bonnen2026}; cold side qualitative \citep{bauknecht2023}; vendor-level, only winter months fall below 25$^\circ$C & Vendor-level\\
+Resistance sensitivity $E_r$ & 25 / 20 / 20~kJ/mol & No source found; small effect & Scenario\\
+Cycle-life DoD exponent $k$ & 1.4 / 1.0 / 1.0 & No source found; cycle life $\propto(0.8/DoD)^k$ & Scenario\\
+Battery above ambient & +5$^\circ$C (0, 10 tested) & Not measured in \citep{chowdhury2026}; \emph{largest uncertainty} & Scenario\\
+\midrule
+\multicolumn{4}{l}{\textit{Duty cycle}}\\
+Energy use & 79.7~Wh/km & Mean of 88 and 71.4~Wh/km from two studies \citep{peakdemand}; 52--88 tested & Sourced\\
+Average speed & 15~km/h & 1.2~kW (20~A$\times$60~V, 5 passengers) \citep{chowdhury2026} divided by 79.7~Wh/km & Derived\\
+Daily distance & 66~km & Calibrated so lead-acid grid energy is 8.5~kWh per charge, midpoint of 8--9~kWh \citep{chowdhury2026}; 40--100 tested & Derived\\
+Charger efficiency & 80\% & Iron-core chargers \citep{chowdhury2026} & Sourced\\
+Operating days & 300 per year (250--350 tested) & No source found & Scenario\\
+\midrule
+\multicolumn{4}{l}{\textit{Economics}}\\
+Tariff & BDT 11.36/kWh (7.70, 16.24 tested) & BERC order of 3 June 2026 \citep{berc2026fe,dhakatribune2026}; wholesale revised again in August 2026 \citep{observer2026}; hub fee check: 80--100 BDT per 8--9~kWh $\approx$10.6 \citep{chowdhury2026} & Sourced (secondary)\\
+Discount rate & 11.57\% (${\pm}20\%$ tested) & Weighted-average lending rate, July 2024 \citep{ceic_lending}; update to the latest Bangladesh Bank value & Sourced\\
+Maintenance, scrap & 0; scrap 0/15/30\% of LA price & No Bangladesh price found; scenario runs & Scenario\\
+\midrule
+\multicolumn{4}{l}{\textit{Fleet, carbon and lead}}\\
+Fleet size & 1.4~M \citep{clean2024}; 3.0~M & Sources disagree; both reported \citep{pureearth_smep} & Sourced\\
+Grid emission factor & 0.62~tCO$_2$/MWh & Department of Environment, 2020--22 \citep{doe_gef}; 0.55--0.70 tested & Sourced\\
+Manufacture+EOL carbon & 40 / 50 / 78.4~kg\,CO$_2$e/kWh & \citep{jasper2025} (LA, LFP); NMC cell level \citep{paul2024}; LFP 50--110 tested & Sourced\\
+Lead per pack & 60 / 90 / 125~kg & 125~kg \citep{pureearth_smep}; 60 and 90 are scenarios & Sourced + scenario\\
+Informal recycling share & 70--80\% & \citep{dailystar80,pureearth_smep,cpd2025} & Sourced\\
+\end{longtable}
+\end{footnotesize}
+\end{landscape}

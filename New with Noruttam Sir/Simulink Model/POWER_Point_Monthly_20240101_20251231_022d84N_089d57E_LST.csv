@@ -1,0 +1,12 @@
+-BEGIN HEADER-
+NASA/POWER Source Native Resolution Monthly and Annual 
+Dates (month/day/year): 01/01/2024 through 12/31/2025 in LST
+Location: Latitude  22.8447   Longitude 89.5652 
+Elevation from MERRA-2: Average for 0.5 x 0.625 degree lat/lon region = 6.26 meters
+The value for missing source data that cannot be computed or is outside of the sources availability range: -999 
+Parameter(s): 
+T2M     MERRA-2 Temperature at 2 Meters (C) 
+-END HEADER-
+PARAMETER,YEAR,JAN,FEB,MAR,APR,MAY,JUN,JUL,AUG,SEP,OCT,NOV,DEC,ANN
+T2M,2024,16.36,21.51,26.32,33.5,30.93,29.73,29.07,28.03,28.32,27.28,22.59,17.98,25.96
+T2M,2025,18.17,23.2,28.56,30.08,29.68,28.89,28.34,27.91,27.89,26.53,21.1,16.78,25.6

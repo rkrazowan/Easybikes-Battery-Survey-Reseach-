@@ -1,0 +1,36 @@
+\section{Results}
+\subsection{Temperature input}
+Monthly mean T2M follows the same seasonal cycle at all three sites, from about \Tmin$^\circ$C in January to \Tmax$^\circ$C in April 2024 (\cref{fig:temp}). Mean battery temperature is \TcKhulna, \TcChuadanga{} and \TcRajshahi$^\circ$C at Khulna, Chuadanga and Rajshahi, a spread of \Tspread$^\circ$C (\cref{tab:results}).
+\begin{figure}[t]\centering\includegraphics[width=.8\textwidth]{fig1_temperature.png}\caption{NASA POWER monthly mean 2\,m temperature at the three sites, Jan 2024--Dec 2025.}\label{fig:temp}\end{figure}
+
+\subsection{Performance, life and cost}
+\input{tables/tab_results}
+\Cref{tab:results,fig:comp} give the main comparison. Discharge efficiency is about \effLA\% (LA), \effLFP\% (LFP) and \effNMC\% (NMC). Modelled life is \lifeLA{} months for LA, \lifeNMC{} for NMC and \lifeLFP{} for LFP (site mean), i.e.\ about \repLA{} LA packs but \repLFP{} LFP pack replacement in ten years. The 10-year net present cost per bike is BDT \tcoLA{} (LA), \tcoNMC{} (NMC) and \tcoLFP{} (LFP): LFP saves BDT \tcoSave{} per bike, and its cost per km (\cpkLFP\ BDT) is less than half that of LA (\cpkLA\ BDT). The LA bank has the longest range (\rngLA{} vs \rngLFP~km) because it stores more energy (9.0 vs 7.7~kWh), not because it is more efficient. All packs run close to the 80\% DoD limit in some months (maximum \dodmaxLA/\dodmaxLFP/\dodmaxNMC\%), which is realistic for easy-bike duty.
+\begin{figure}[t]\centering\includegraphics[width=.9\textwidth]{fig2_comparison.png}\caption{Site comparison of discharge efficiency, worst-month range, battery life and 10-year NPV cost.}\label{fig:comp}\end{figure}
+\begin{figure}[t]\centering\includegraphics[width=.85\textwidth]{fig3_soc.png}\caption{Month-end state of charge after one day's discharge; dashed line = 20\% limit.}\label{fig:soc}\end{figure}
+
+\subsection{Heat-wave stress}
+At 42$^\circ$C ambient (Chuadanga, 10 May 2025 \citep{heat2025}) with the 5$^\circ$C offset, LA ages \heatLA{} times, LFP \heatLFP{} times and NMC \heatNMC{} times faster than in the 2024--25 monthly-mean climate. The absolute life gap between lead-acid and lithium therefore widens in heat.
+
+\subsection{Scenarios, sensitivity and break-even}\label{sec:sens}
+\input{tables/tab_scen}
+\Cref{tab:scen} shows that the battery temperature rise and daily distance change life and cost strongly. A battery 10$^\circ$C above ambient cuts LA life to 8.7 months, while 0$^\circ$C raises it to 16.3. At 100~km per day none of the three packs can serve the duty within 100\% DoD, and at 40~km per day all last far longer. The tornado chart (\cref{fig:tornado}) ranks daily distance, battery temperature rise and energy use above price, tariff or ageing parameters. LFP stays cheaper than LA up to an LFP pack price of BDT \beLFP{} (model price \priceLFP), BDT \beDistLow{} at 40~km per day and BDT \beTten{} at +10$^\circ$C. The up-front premium of BDT \premium{} is repaid in about \paybackYr{} year of running savings (undiscounted).
+\begin{figure}[t]\centering\includegraphics[width=.85\textwidth]{fig4_tornado.png}\caption{One-at-a-time sensitivity of the LFP-minus-LA 10-year cost gap at Chuadanga (base gap $-$\gapBase\ BDT). Negative values favour LFP.}\label{fig:tornado}\end{figure}
+\paragraph{When does LFP stop being cheaper?} We combined the settings most unfavourable to LFP: 40~km per day, no battery heating, LA scrap value 30\% of price, LA halving every 10~K, and an LFP price 20\% above the model value. LFP is still cheaper by BDT \jointGap{}. If the LFP price is 50\% higher in that same case, LA becomes cheaper by BDT \jointGapHigh. LFP's cost advantage is therefore robust to any single assumption but not to a combination of several, and the LA scrap value is the most important missing datum (\cref{tab:scen} and the tornado: a 30\% scrap value cuts the gap by BDT \scrapThirty).
+
+\subsection{Validation}
+V1 passed (24 months per site, no gaps). V2 passed: 79.7~Wh/km lies inside the 52--88~Wh/km spanned by the published values. V3 (\cref{fig:valid}): LFP life (\lifeLFP~mo) lies at the upper edge of the 60--84 reported; LA life (\lifeLA~mo) is \vLApct\% above the 8--12 months field range; NMC life (\lifeNMC~mo) is \vNMCpct\% above 36--48. V4: modelled lead-acid grid energy (\vEgrid~kWh per bike-day) is \vCleanPct\% below the CLEAN-implied \vClean~kWh, a gap that only field metering can resolve (the CLEAN figure may include other vehicle types and charging losses). V5 is the Simulink cross-check described in the Methodology. The model is therefore plausible against the published ranges but is \emph{not} validated against operator records.
+\begin{figure}[t]\centering\includegraphics[width=.6\textwidth]{fig_valid.png}\caption{Modelled battery life (site mean) against reported ranges (dashed boxes; logarithmic axis).}\label{fig:valid}\end{figure}
+
+\subsection{Carbon footprint}
+\input{tables/tab_co2bike}
+A lead-acid easy-bike causes about \perbikeLA{}~kg\,CO$_2$e per year, an LFP bike \perbikeLFP{} and an NMC bike \perbikeNMC{} (\cref{tab:co2bike,fig:co2}). Switching one bike to LFP saves \saveLFPbike{}~kg\,CO$_2$e per year, \saveLFPop{} from lower electricity use and \saveLFPemb{} from fewer manufactured packs (\packsLA{} LA packs against \packsLFP{} LFP packs per year). For 1.4~M bikes this is \fleetLFPa{}~Mt\,CO$_2$e per year, or \fleetLFPb{}~Mt for 3~M bikes (\cref{tab:co2fleet}). The independent CLEAN-based estimate, electricity only, gives \cleanGWh{}~GWh and \cleanMt{}~Mt\,CO$_2$ per year. The per-bike saving stays between \sensMin{} and \sensMax{}~kg per year for LFP manufacturing between 50 and 110~kg\,CO$_2$e/kWh and grid factors of 0.55--0.70 (\cref{fig:co2sens}).
+\begin{figure}[t]\centering\includegraphics[width=.62\textwidth]{fig5_co2_bike.png}\caption{Annual carbon footprint per bike, split into operation and manufacture+end-of-life.}\label{fig:co2}\end{figure}
+\input{tables/tab_co2fleet}
+\begin{figure}[t]\centering\includegraphics[width=.62\textwidth]{fig7_co2_sensitivity.png}\caption{Per-bike saving from LFP versus lead-acid for three LFP manufacturing footprints and three grid emission factors.}\label{fig:co2sens}\end{figure}
+
+\subsection{Lead flow and policy scenarios}
+\input{tables/tab_lead}
+\input{tables/tab_policy}
+The lead-acid fleet cycles \leadLow--\leadHigh{}~kt of lead per year at 1.4~M bikes (\cref{tab:lead}); the upper value is close to the 167~kt reported by Pure Earth for the whole electric three-wheeler sector \citep{pureearth_smep}. Converted bikes need replacement so rarely that their lead flow in the model falls to zero. A 50\% conversion saves \polHalfCO{}~Mt\,CO$_2$e per year and BDT \polHalfSav{} billion for operators over ten years, and full conversion saves \polFullCO{}~Mt per year and BDT \polFullSav{} billion (\cref{tab:policy,fig:policy}).
+\begin{figure}[t]\centering\includegraphics[width=.62\textwidth]{fig6_policy.png}\caption{Policy scenarios: CO$_2$e saved and lead cycled through recycling versus the share of the fleet on LFP.}\label{fig:policy}\end{figure}

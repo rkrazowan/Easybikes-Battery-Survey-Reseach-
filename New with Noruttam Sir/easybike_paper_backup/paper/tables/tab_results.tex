@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering\small
+\caption{Simulated 24-month results (NASA POWER monthly $T_{2m}$, Jan 2024--Dec 2025; battery temperature = ambient + 5~$^\circ$C). Source: \texttt{results\_summary.csv} from \texttt{easybike\_main.m}. Life is in months of operation at 300~days\,yr$^{-1}$; TCO is net present value at an 11.57\% discount rate and a tariff of BDT 11.36/kWh.}
+\label{tab:results}
+\begin{tabular}{llrrrrrrrrr}
+\toprule
+Site & Battery & $\bar T_{cell}$ & $\eta$ & DoD & Range & $E_{grid}$ & Life & Repl. & TCO$_{10}$ & Cost \\
+ & & ($^\circ$C) & (\%) & (\%) & (km) & (kWh/d) & (mo) & (10~yr) & ($10^3$ BDT) & (BDT/km) \\
+\midrule
+Khulna & Lead-Acid & 30.8 & 90.2 & 63.5 & 83.3 & 8.10 & 12.4 & 9 & 725 & 6.37 \\
+ & LFP & 30.8 & 97.8 & 69.4 & 76.1 & 6.87 & 83.7 & 1 & 342 & 3.00 \\
+ & NMC & 30.8 & 96.7 & 69.5 & 76.0 & 7.03 & 52.9 & 2 & 437 & 3.84 \\
+\midrule
+Chuadanga & Lead-Acid & 30.8 & 90.2 & 63.5 & 83.3 & 8.10 & 12.2 & 9 & 731 & 6.42 \\
+ & LFP & 30.8 & 97.8 & 69.4 & 76.1 & 6.87 & 83.2 & 1 & 342 & 3.01 \\
+ & NMC & 30.8 & 96.7 & 69.5 & 76.0 & 7.03 & 52.8 & 2 & 437 & 3.84 \\
+\midrule
+Rajshahi & Lead-Acid & 30.5 & 90.0 & 63.7 & 83.0 & 8.13 & 12.4 & 9 & 724 & 6.36 \\
+ & LFP & 30.5 & 97.8 & 69.5 & 76.0 & 6.88 & 84.0 & 1 & 341 & 2.99 \\
+ & NMC & 30.5 & 96.7 & 69.6 & 75.9 & 7.04 & 52.9 & 2 & 437 & 3.84 \\
+\bottomrule
+\end{tabular}
+\end{table*}

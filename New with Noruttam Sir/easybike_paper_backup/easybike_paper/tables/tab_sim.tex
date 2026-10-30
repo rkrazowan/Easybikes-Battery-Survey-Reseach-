@@ -1,0 +1,19 @@
+\begin{table}[t]
+\caption{Analytic reference values for the survey parameter set (output of \texttt{easybike\_discharge}): discharge efficiency $\eta$, end-of-day SOC and range at four battery temperatures. The Simulink model must reproduce them to the printed precision (acceptance: 0.5 percentage points in $\eta$, 0.01 in SOC, 2\% in range).}
+\label{tab:sim}
+\centering\footnotesize
+\begin{tabular}{lrrrr}
+\hline
+Battery & $T$ ($^\circ$C) & $\eta$ & SOC$_{end}$ & Range (km) \\
+\hline
+Lead-Acid & 15 & 0.8170 & 0.000 & 57.4 \\
+Lead-Acid & 25 & 0.8803 & 0.083 & 66.3 \\
+Lead-Acid & 35 & 0.9172 & 0.148 & 71.4 \\
+Lead-Acid & 45 & 0.9406 & 0.182 & 74.4 \\
+LFP & 15 & 0.9662 & 0.111 & 68.4 \\
+LFP & 25 & 0.9747 & 0.172 & 73.4 \\
+LFP & 35 & 0.9806 & 0.187 & 74.8 \\
+LFP & 45 & 0.9849 & 0.196 & 75.6 \\
+\hline
+\end{tabular}
+\end{table}

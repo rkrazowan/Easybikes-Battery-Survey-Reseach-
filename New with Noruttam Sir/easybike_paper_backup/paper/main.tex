@@ -1,0 +1,37 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.3cm]{geometry}
+\usepackage{pdflscape}\usepackage[expansion=false]{microtype}\usepackage{amsmath,amssymb,graphicx,booktabs,longtable,tabularx,array,multirow,makecell,enumitem,xcolor,caption,subcaption,threeparttable,siunitx}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black]{hyperref}
+\usepackage[capitalise,noabbrev]{cleveref}
+\captionsetup{font=small,labelfont=bf}
+\setlength{\parskip}{3pt}
+\input{numbers}
+% ---- placeholder for figures you will add later: \figph{height}{label}{what to insert}{caption}
+\newcommand{\figph}[4]{\begin{figure}[t]\centering
+ \fbox{\parbox[c][#1][c]{0.92\textwidth}{\centering\textcolor{red!70!black}{\textbf{[FIGURE PLACEHOLDER]}}\\[2pt] #3}}
+ \caption{#4}\label{#2}\end{figure}}
+\newcommand{\todo}[1]{\textcolor{red!70!black}{[\textbf{TODO:} #1]}}
+\graphicspath{{figures/}}
+\title{\textbf{When Does Lithium Replace Lead-Acid? A Temperature-Driven Techno-Economic, Carbon and Public-Health Assessment of Lead-Acid, LFP and NMC Batteries for Electric Easy-Bikes in Bangladesh}}
+\author{Razowan Kabir\thanks{Department of Electrical and Electronic Engineering, Khulna University of Engineering \& Technology (KUET), Khulna, Bangladesh. E-mail: \todo{add e-mail}}\\[2pt]
+\todo{add co-authors; supervisor must approve}}
+\date{\todo{submission date}}
+\begin{document}
+\maketitle
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_literature}
+\input{sections/03_methodology}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+\section*{Declarations}
+\noindent\textbf{Data availability.} NASA POWER files, MATLAB/Simulink code (\texttt{easybike\_*.m}, \texttt{easybike\_battery.slx}) and all result tables are provided as supplementary material. \todo{deposit on Zenodo/GitHub and add DOI}\\
+\textbf{Funding / Conflicts of interest.} \todo{complete}\\
+\textbf{Acknowledgements.} \todo{complete}
+\bibliographystyle{unsrtnat}
+\bibliography{references}
+\appendix
+\input{sections/07_appendix}
+\end{document}

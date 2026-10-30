@@ -1,0 +1,20 @@
+\begin{table}[t]
+\caption{Survey-anchored model results for three sites (NASA POWER monthly $T_{2m}$, Jan 2024--Dec 2025; battery temperature = ambient + 5\,$^\circ$C). Cycle life is calibrated at Khulna so that modelled life equals the survey median replacement interval (18 months lead-acid, 43.5 months LFP); other sites differ only through temperature. TCO is net present cost at 11.96\% discount rate and BDT 11.36/kWh. Source: \texttt{results\_summary.csv} from \texttt{easybike\_main.m}.}
+\label{tab:results}
+\centering\footnotesize
+\resizebox{\textwidth}{!}{\begin{tabular}{llrrrrrrrrr}
+\hline
+Site & Battery & $\bar T_{cell}$ & $\eta$ & DoD & Range & $E_{grid}$ & Life & Repl. & TCO$_{10}$ & Cost \\
+ & & ($^\circ$C) & (\%) & (\%) & (km) & (kWh/d) & (mo) & (10 yr) & ($10^3$ BDT) & (BDT/km) \\
+\hline
+Khulna & Lead-Acid & 30.8 & 90.2 & 88.1 & 69.1 & 8.35 & 18.0 & 6 & 245 & 1.90 \\
+ & LFP & 30.8 & 97.8 & 82.1 & 74.1 & 7.09 & 43.5 & 2 & 322 & 2.50 \\
+\hline
+Chuadanga & Lead-Acid & 30.8 & 90.2 & 88.1 & 69.1 & 8.36 & 17.8 & 6 & 247 & 1.91 \\
+ & LFP & 30.8 & 97.8 & 82.1 & 74.0 & 7.09 & 43.3 & 2 & 323 & 2.50 \\
+\hline
+Rajshahi & Lead-Acid & 30.5 & 90.0 & 88.4 & 68.9 & 8.38 & 18.1 & 6 & 246 & 1.90 \\
+ & LFP & 30.5 & 97.8 & 82.2 & 74.0 & 7.09 & 43.7 & 2 & 322 & 2.49 \\
+\hline
+\end{tabular}}
+\end{table}

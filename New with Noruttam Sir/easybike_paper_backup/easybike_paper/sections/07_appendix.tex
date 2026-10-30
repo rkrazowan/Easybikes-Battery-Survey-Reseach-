@@ -1,0 +1,17 @@
+\appendices
+\section{Survey Data Handling}
+\label{app:survey}
+The cleaned data (\texttt{survey\_cleaned.csv}, 43 rows) keep one value per field in one unit. The rules applied, and the answers that needed interpretation, were:
+\begin{itemize}
+\item Bengali digits were converted to Western digits; ``k'' was read as thousands of taka (90k = BDT 90{,}000); ranges (for example 70--100 km, 12--24 months) were replaced by their mid-points.
+\item ``Powder'' was entered by the surveyor as a separate battery type and is kept separate; it is not merged with lead-acid.
+\item Purchase prices of BDT 60{,}000 or more were recorded for seven lead-based respondents; they were kept and the median is used.
+\item Capacity per battery was reported by only five respondents (120, 120, 160, 180 and 30 Ah). The 30 Ah answer accompanies a six-battery, 72 V set and was treated as a charger current, not a battery capacity.
+\item Charging-cost answers mix per-charge, per-month and unspecified bases and were not used.
+\item Problem answers were grouped into six categories; the two Bengali phrasings of ``low charge'' were merged.
+\end{itemize}
+
+\section{Simulink Verification}
+\label{app:sim}
+The Simulink model was verified against the analytic code in a run of twelve cases (three chemistries at 15, 25, 35 and 45\,$^\circ$C, earlier parameter set); efficiency, end-of-day SOC and range were identical to the printed precision in every case. Table~\ref{tab:sim} gives the analytic values for the survey parameter set that the final run must reproduce. \todo{[Re-run easybike\_build\_simulink with the survey parameters, confirm PASS and add the Simulink columns.]}
+\input{tables/tab_sim}

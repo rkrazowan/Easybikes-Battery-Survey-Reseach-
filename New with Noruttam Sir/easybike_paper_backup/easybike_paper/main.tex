@@ -1,0 +1,46 @@
+% ============================================================
+% main.tex  --  Single-column journal manuscript
+% Compile: pdflatex main; bibtex main; pdflatex main; pdflatex main
+% ============================================================
+\documentclass[11pt,a4paper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[a4paper,margin=2.2cm]{geometry}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\graphicspath{{figures/}}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{cite}
+\usepackage[hyphens]{url}
+\def\UrlBreaks{\do\/\do\-\do\.\do\_\do\=\do\?\do\&}
+\Urlmuskip=0mu plus 2mu
+\usepackage{caption}
+\captionsetup{font=small,labelfont=bf}
+\linespread{1.08}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{3em}
+\renewcommand{\topfraction}{0.9}\renewcommand{\bottomfraction}{0.9}
+\renewcommand{\textfraction}{0.08}\renewcommand{\floatpagefraction}{0.75}
+\newcommand{\figref}[1]{Fig.~\ref{fig:#1}}
+\newcommand{\todo}[1]{\textcolor{red}{#1}}% red = confirm or fill before submission
+\providecommand{\PARstart}[2]{#1#2}
+\newcommand{\appendices}{\appendix}
+\input{numbers}% every number used in the text is defined here
+\input{title_block}
+\begin{document}
+\maketitle
+\input{sections/00_abstract}
+\input{sections/01_introduction}
+\input{sections/02_literature}
+\input{sections/03_methodology}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+\input{sections/07_appendix}
+\section*{Data Availability}
+The cleaned survey data (43 responses), the NASA POWER files (monthly T2M, 2024-01-01 to 2025-12-31, points 22.84$^\circ$N 89.57$^\circ$E, 23.64$^\circ$N 88.69$^\circ$E and 24.38$^\circ$N 88.60$^\circ$E), the MATLAB/Simulink code and all result tables will be made available in a public repository. \todo{[Add repository DOI.]}
+\section*{Acknowledgment}
+The author thanks \todo{[supervisor, institution and the drivers who answered the survey]}. In line with journal policy on generative AI, the author discloses that an AI assistant (Anthropic Claude) was used to help draft code, text and figures; the authors reviewed all content and are responsible for it. \todo{[Edit as the journal requires.]}
+\bibliographystyle{ieeetr}
+\bibliography{references}
+\end{document}
