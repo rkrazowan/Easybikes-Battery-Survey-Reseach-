@@ -1,0 +1,6 @@
+Put the three NASA POWER monthly CSV files here (names must match POWER_Point_Monthly_*.csv):
+  Khulna     22.84 N, 89.57 E
+  Chuadanga  23.64 N, 88.69 E
+  Rajshahi   24.38 N, 88.60 E
+Parameter T2M, monthly, 2024-01-01 to 2025-12-31, from https://power.larc.nasa.gov/data-access-viewer/
+Then copy them into matlab/ (for MATLAB) or python/ (for Python) before running.

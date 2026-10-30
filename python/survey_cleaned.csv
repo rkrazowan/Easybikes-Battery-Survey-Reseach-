@@ -1,0 +1,44 @@
+Timestamp,Battery type,Purchase cost (BDT),No. of batteries,Voltage per battery (V),Capacity per battery (Ah),Daily distance min (km),Daily distance max (km),Daily distance mid (km),Charges per day,Charging cost value (BDT),Charging cost basis,Months in use,Replacement interval min (months),Replacement interval max (months),Replacement interval mid (months),Main problem,Resale value min (BDT),Resale value max (BDT),Resale value mid (BDT),Resale / purchase ratio,Review notes
+2026-10-08 00:47:18.107,Lead-acid,26000,6,12,30.0,61,80.0,70.5,1,600.0,Per month (stated),3,12.0,24.0,18.0,Slow charging,13000,13000,13000,0.5,"Pack voltage 72 V stated; per-battery value derived (pack ÷ count). Resale ""approximately half"": taken as 50% of purchase cost (derived)."
+2026-10-13 20:04:53.780,Lead-acid,75000,5,12,160.0,100,,100.0,1,700.0,Per month (stated),1,12.0,24.0,18.0,Slow charging,35000,35000,35000,0.4666666666666667,"Daily distance "">100 km"": lower bound used. High purchase cost for Lead-acid; verify battery type/capacity."
+2026-10-17 17:26:06.021,Lead-acid,29500,4,12,120.0,41,60.0,50.5,1,,Not known,24,24.0,36.0,30.0,Charger overheating,11500,11500,11500,0.3898305084745763,
+2026-10-17 17:27:16.212,Lead-acid,27500,4,12,180.0,100,,100.0,1,,Not known,10,12.0,24.0,18.0,Slow charging,11500,11500,11500,0.41818181818181815,"Daily distance "">100 km"": lower bound used."
+2026-10-17 17:40:35.489,Lead-acid,28500,4,12,120.0,61,80.0,70.5,2,300.0,Per month (stated),7,12.0,24.0,18.0,Fast discharge,13700,13700,13700,0.4807017543859649,
+2026-10-19 08:10:44.509,Lithium (LFP),90000,4,12,,61,80.0,70.5,1,240.0,Per month (stated),30,,,,Reduced range,3000,4000,3500,0.03888888888888889,Pack voltage 48 V stated; per-battery value derived (pack ÷ count). Range given; midpoint used. Range given; midpoint used. Battery new; not yet replaced.
+2026-10-26 00:15:30.377,Lithium (LFP),100000,4,12,,61,80.0,70.5,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,8000,10000,9000,0.09,
+2026-10-27 21:40:30.947,Lead-acid,27500,4,12,,41,60.0,50.5,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.36363636363636365,
+2026-10-27 21:42:01.011,Lead-acid,26000,4,12,,41,60.0,50.5,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,8000,9000,8500,0.3269230769230769,
+2026-10-27 21:43:14.996,Lead-acid,28000,4,12,,41,60.0,50.5,1,300.0,Per month (stated),30,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.35714285714285715,
+2026-10-27 21:44:56.104,Lead-acid,26000,4,12,,41,60.0,50.5,1,300.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,11000,12000,11500,0.4423076923076923,
+2026-10-27 21:46:11.087,Lead-acid,28000,4,12,,61,80.0,70.5,1,265.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,12000,12000,12000,0.42857142857142855,Range given; midpoint used.
+2026-10-27 21:47:49.495,Lead-acid,27500,6,12,,41,60.0,50.5,1,310.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,10000,12000,11000,0.4,Range given; midpoint used.
+2026-10-27 21:49:40.232,Lead-acid,26500,4,12,,41,60.0,50.5,1,300.0,Per month (stated),18,,,,Reduced range,9000,10000,9500,0.3584905660377358,"Replacement interval: ""No change"" (not usable)."
+2026-10-27 21:50:55.173,Lead-acid,26000,4,12,,41,60.0,50.5,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.38461538461538464,
+2026-10-27 21:52:13.260,Lead-acid,90000,4,12,,61,80.0,70.5,1,300.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,12000,12000,12000,0.13333333333333333,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-27 21:56:16.422,Lead-acid,95000,4,12,,61,80.0,70.5,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,12000,11000,0.11578947368421053,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-18 00:00:00.000,Lead-acid,40000,5,12,,130,130.0,130.0,1,150.0,Per month (stated),6,12.0,18.0,15.0,Reduced range,30000,30000,30000,0.75,
+2026-10-19 00:00:00.000,Lead-acid,36000,5,12,,120,120.0,120.0,1,,Not known,6,6.0,10.0,8.0,Low charge / capacity,35000,35000,35000,0.9722222222222222,
+2026-10-20 00:00:00.000,Lithium (LFP),112000,1,12,,150,150.0,150.0,1,300.0,Per month (stated),8,48.0,60.0,54.0,Reduced range,15000,20000,17500,0.15625,"Charging cost given in kWh units, not BDT."
+2026-10-21 00:00:00.000,Lead-acid,75000,5,12,,130,130.0,130.0,1,100.0,Unspecified,5,10.0,12.0,11.0,Low charge / capacity,35000,35000,35000,0.4666666666666667,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-20 00:00:00.000,Lead-acid,65000,4,12,,70,70.0,70.0,1,100.0,Unspecified,17,15.0,20.0,17.5,Reduced range,27000,27000,27000,0.4153846153846154,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-22 00:00:00.000,Lithium (LFP),130000,1,12,,170,170.0,170.0,1,180.0,Unspecified,6,48.0,60.0,54.0,No problem yet,25000,25000,25000,0.19230769230769232,
+2026-10-22 00:00:00.000,Lead-acid,75000,4,12,,150,150.0,150.0,1,90.0,Unspecified,2,8.0,12.0,10.0,Reduced range,15000,20000,17500,0.23333333333333334,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-23 00:00:00.000,Lead-acid,45000,4,12,,120,120.0,120.0,1,100.0,Unspecified,3,12.0,15.0,13.5,Reduced range,26000,28000,27000,0.6,
+2026-10-23 00:00:00.000,Lead-acid,96000,6,12,,150,150.0,150.0,1,90.0,Unspecified,4,12.0,16.0,14.0,Reduced range,48000,48000,48000,0.5,High purchase cost for Lead-acid; verify battery type/capacity.
+2026-10-23 00:00:00.000,Powder,28000,4,12,,120,120.0,120.0,1,1200.0,Per month (stated),6,12.0,24.0,18.0,Reduced range,15000,15000,15000,0.5357142857142857,
+2026-10-28 00:00:00.000,Powder,27000,4,12,,40,60.0,50.0,1,250.0,Per month (stated),18,24.0,36.0,30.0,Slow charging,10000,10000,10000,0.37037037037037035,
+2026-10-28 00:00:00.000,Powder,28500,4,12,,40,60.0,50.0,1,280.0,Per month (stated),24,24.0,36.0,30.0,Slow charging,11000,11000,11000,0.38596491228070173,
+2026-10-28 00:00:00.000,Powder,26000,4,12,,40,60.0,50.0,1,250.0,Per month (stated),18,24.0,36.0,30.0,Slow charging,11000,11000,11000,0.4230769230769231,
+2026-10-28 00:00:00.000,Powder,35500,6,12,,60,80.0,70.0,1,300.0,Per month (stated),24,24.0,30.0,27.0,Slow charging,15000,15000,15000,0.4225352112676056,
+2026-10-28 00:00:00.000,Lithium (LFP),95000,4,12,,60,80.0,70.0,1,300.0,Per month (stated),24,30.0,36.0,33.0,Reduced range,15000,18000,16500,0.1736842105263158,
+2026-10-28 00:00:00.000,Powder,28500,4,12,,40,60.0,50.0,1,250.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.3508771929824561,
+2026-10-28 00:00:00.000,Powder,27000,4,12,,40,60.0,50.0,1,280.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.37037037037037035,
+2026-10-28 00:00:00.000,Powder,26500,4,12,,40,60.0,50.0,1,250.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,9000,9000,9000,0.33962264150943394,
+2026-10-28 00:00:00.000,Powder,90000,4,12,,60,80.0,70.0,1,300.0,Per month (stated),24,30.0,36.0,33.0,Reduced range,12000,12000,12000,0.13333333333333333,High purchase cost for Powder; verify battery type/capacity.
+2026-10-28 00:00:00.000,Powder,28500,4,12,,40,60.0,50.0,1,250.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.3508771929824561,
+2026-10-28 00:00:00.000,Powder,36000,6,12,,40,60.0,50.0,1,280.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,12000,12000,12000,0.3333333333333333,
+2026-10-28 00:00:00.000,Powder,36000,6,12,,40,60.0,50.0,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,12000,12000,12000,0.3333333333333333,
+2026-10-28 00:00:00.000,Powder,28000,4,12,,40,60.0,50.0,1,250.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.35714285714285715,
+2026-10-28 00:00:00.000,Powder,27500,4,12,,40,60.0,50.0,1,300.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.36363636363636365,
+2026-10-28 00:00:00.000,Powder,26500,4,12,,40,60.0,50.0,1,280.0,Per month (stated),24,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.37735849056603776,
+2026-10-28 00:00:00.000,Powder,27000,4,12,,40,60.0,50.0,1,250.0,Per month (stated),18,24.0,36.0,30.0,Reduced range,10000,10000,10000,0.37037037037037035,
